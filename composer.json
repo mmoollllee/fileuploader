@@ -1,7 +1,7 @@
 {
     "name": "mg/fileuploader-plugin",
     "type": "october-plugin",
-    "description": "Add a fileuploader field inside fileuploader fields to attach video-files to images",
+    "description": "Add a fileuploader field inside fileuploader widget to attach video-files to images",
     "require": {
         "composer/installers": "~1.0"
     }

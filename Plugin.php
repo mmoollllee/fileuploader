@@ -45,7 +45,7 @@ class Plugin extends PluginBase
             $widget->addFields([
                 'video' => [
                     'label' => 'Video',
-                    'type' => 'fileupload',
+                    'type' => 'fileupload', // works with "mediafinder", but not with "fileupload"
                 ]
             ]);
 
