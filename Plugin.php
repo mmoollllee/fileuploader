@@ -38,6 +38,13 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        // Thanks [snipi@OctoberTalk](https://talk.octobercms.com/t/extend-fileuploader-widget/1585/2?u=mmoollllee)
+        File::extend(function ($model) {
+            $model->attachMany['video'] = [
+                File::class, 'delete' => true
+            ];
+        });
+        
         Event::listen('backend.form.extendFields', function ($widget) {
 
             if (!$widget->model instanceof File) return;
