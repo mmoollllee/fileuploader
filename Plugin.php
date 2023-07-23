@@ -40,7 +40,7 @@ class Plugin extends PluginBase
     {
         // Thanks [snipi@OctoberTalk](https://talk.octobercms.com/t/extend-fileuploader-widget/1585/2?u=mmoollllee)
         File::extend(function ($model) {
-            $model->attachMany['video'] = [
+            $model->attachOne['video'] = [
                 File::class, 'delete' => true
             ];
         });
@@ -52,7 +52,8 @@ class Plugin extends PluginBase
             $widget->addFields([
                 'video' => [
                     'label' => 'Video',
-                    'type' => 'fileupload', // works with "mediafinder", but not with "fileupload"
+                    'type' => 'fileupload',
+                    'maxFiles' => 1,
                 ]
             ]);
 
