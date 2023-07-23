@@ -2,3 +2,4 @@
 1.0.2: 
   - create video Column
   - add_video_to_system_files_table.php
+  - create_mg_file_videos_table.php

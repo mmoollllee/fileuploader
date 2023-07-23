@@ -2,6 +2,7 @@
 
 use Backend;
 use Event;
+use MG\FileUploader\Models\FileVideo;
 use System\Classes\PluginBase;
 use System\Models\File;
 
@@ -41,7 +42,7 @@ class Plugin extends PluginBase
         // Thanks [snipi@OctoberTalk](https://talk.octobercms.com/t/extend-fileuploader-widget/1585/2?u=mmoollllee)
         File::extend(function ($model) {
             $model->attachOne['video'] = [
-                File::class, 'delete' => true
+                FileVideo::class, 'delete' => true
             ];
         });
         
